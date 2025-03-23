@@ -46,19 +46,6 @@ body {
     color: #4848fc;
 }
 
-.openbadge {
-    display: flex;
-}
-
-.openbadge img{
-    margin: 2px;
-}
-
-.openbadge-icon {
-    width: 110px;
-    height: 110px;
-}
-
 .sns-link {
     margin-top: 20px;
     padding: 30px;
@@ -95,9 +82,5 @@ body {
         display: block;
         font-size: 18px;
         margin-bottom: 4px;
-    }
-
-    .openbadge {
-        display: block;
     }
 }
