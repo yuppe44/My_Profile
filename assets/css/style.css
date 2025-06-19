@@ -51,7 +51,7 @@ body {
     padding: 30px;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 .sns-icon {
     width: 40px;
