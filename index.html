@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="wrapper">
+        <button class="theme-toggle" id="themeToggle">Light</button>
         <header>
             <img class="profile-img" src="assets/img/myface.jpeg" alt="私が幼い時の写真">
             <h1 class="name">YUHEI FUJITA</h1>
@@ -17,21 +18,40 @@
         <main>
             <table class="info-table">
                 <tr><td class="info-label">職業</td><td>プログラマ</td></tr>
-                <tr><td class="info-label">趣味</td><td>ゲーム</td></tr>
+                <tr><td class="info-label">趣味</td><td>シミュレーター(iRacing)</td></tr>
                 <tr><td class="info-label">特技</td><td>タイピング</td></tr>
-                <tr><td class="info-label">ハマっていること</td><td>ミステリー、ファンタジー映画の鑑賞</td></tr>
+                <tr><td class="info-label">ハマっていること</td><td>F1観戦, 映画鑑賞</td></tr>
                 <tr><td class="info-label">好きな食べ物</td><td>カレーライス</td></tr>
                 <tr><td class="info-label">自己分析</td><td>真面目さ：60%<br>推察力：30%<br>コミュニケーション力：10%</td></tr>
                 <tr><td class="info-label">みんなに一言</td><td>僕と一緒にモブプログラミングやりましょう！</td></tr>
             </table>
             <div class="sns-link">
                 <a href="https://github.com/yuppe44" target="_blank"><img class="sns-icon" src="https://img.icons8.com/?size=100&id=63777&format=png&color=000000" alt="GitHub"></a>
-                <a href="https://www.instagram.com/yuhe_chan4?igsh=MXFubmZzOTdtcHY5ZQ%3D%3D&utm_source=qr" target="_blank"><img class="sns-icon" src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram"></a>
+                <a href="https://www.instagram.com/yuuuhei_01/" target="_blank"><img class="sns-icon" src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="Instagram"></a>
             </div>
         </main>
         <footer>
-            <p>&copy;2025 YUHEI FUJITA</p>
+            <p>&copy;2026 YUHEI FUJITA</p>
         </footer>
     </div>
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // 保存済みのテーマを適用（デフォルトはライト）
+        const saved = localStorage.getItem('theme') || 'light';
+        if (saved === 'dark') {
+            body.classList.add('dark');
+            toggle.textContent = 'Light';
+        } else {
+            toggle.textContent = 'Dark';
+        }
+
+        toggle.addEventListener('click', () => {
+            const isDark = body.classList.toggle('dark');
+            toggle.textContent = isDark ? 'Light' : 'Dark';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>

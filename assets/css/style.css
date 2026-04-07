@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+:root {
+    --bg-body: #f0f0f0;
+    --bg-wrapper: #ffffff;
+    --color-text: #000000;
+    --color-label: #4848fc;
+    --color-border: #000000;
+    --color-table-border: #ddd;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --toggle-bg: #333333;
+    --toggle-color: #ffffff;
+}
+
+body.dark {
+    --bg-body: #000000;
+    --bg-wrapper: #1e1e1e;
+    --color-text: #e8e8e8;
+    --color-label: #8080ff;
+    --color-border: #888888;
+    --color-table-border: #444444;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --toggle-bg: #e8e8e8;
+    --toggle-color: #1e1e1e;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -7,43 +31,68 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: var(--bg-body);
+    transition: background-color 0.3s;
 }
 .wrapper {
     text-align: center;
-    background: white;
+    background: var(--bg-wrapper);
     padding: 20px;
     margin: 50px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     max-width: 90%;
     width: 500px;
     position: relative;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.theme-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--toggle-bg);
+    color: var(--toggle-color);
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.theme-toggle:hover {
+    opacity: 0.8;
 }
 .profile-img {
     width: 110px;
     height: 110px;
     border-radius: 50%;
     margin-bottom: 16px;
-    border: 2px solid #000000;
+    border: 2px solid var(--color-border);
+    transition: border-color 0.3s;
 }
 .name {
     font-size: 26px;
     font-weight: 600;
-    color: #000000;
+    color: var(--color-text);
+    transition: color 0.3s;
 }
 .info-table {
     width: 100%;
     margin-top: 20px;
     text-align: left;
+    color: var(--color-text);
+    transition: color 0.3s;
 }
 .info-table td {
     padding: 8px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-table-border);
+    transition: border-color 0.3s;
 }
 .info-label {
     font-weight: 600;
-    color: #4848fc;
+    color: var(--color-label);
+    transition: color 0.3s;
 }
 
 .sns-link {
@@ -56,6 +105,10 @@ body {
 .sns-icon {
     width: 40px;
     height: 40px;
+}
+footer p {
+    color: var(--color-text);
+    transition: color 0.3s;
 }
 @media (max-width: 600px) {
     body {
