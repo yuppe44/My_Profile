@@ -110,6 +110,125 @@ footer p {
     color: var(--color-text);
     transition: color 0.3s;
 }
+/* ---- Big Five card ---- */
+
+.bf-card {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #ffffff;
+    border: 0.5px solid rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 20px;
+    width: 100%;
+    transition: background 0.3s, border-color 0.3s;
+}
+body.dark .bf-card {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+.bf-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 3px;
+    transition: color 0.3s;
+}
+body.dark .bf-title {
+    color: #f0f0f0;
+}
+.bf-subtitle {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 1.25rem;
+}
+.bf-chart-wrap {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 1.25rem;
+}
+.bf-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+}
+.bf-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bf-row-label {
+    font-size: 12px;
+    color: #555;
+    width: 90px;
+    flex-shrink: 0;
+    transition: color 0.3s;
+}
+body.dark .bf-row-label {
+    color: #aaa;
+}
+.bf-bar-bg {
+    flex: 1;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: background 0.3s;
+}
+body.dark .bf-bar-bg {
+    background: rgba(255, 255, 255, 0.1);
+}
+.bf-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: #534AB7;
+}
+.bf-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 99px;
+    white-space: nowrap;
+    width: 64px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: background 0.3s, color 0.3s;
+}
+.tag-high {
+    background: #E6F1FB;
+    color: #0C447C;
+}
+.tag-low {
+    background: #FAECE7;
+    color: #993C1D;
+}
+body.dark .tag-high {
+    background: #0C447C;
+    color: #B5D4F4;
+}
+body.dark .tag-low {
+    background: #712B13;
+    color: #F5C4B3;
+}
+.bf-comment {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    transition: color 0.3s, border-top-color 0.3s;
+}
+body.dark .bf-comment {
+    color: #aaa;
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+.bf-source {
+    font-size: 11px;
+    color: #bbb;
+    margin-top: 8px;
+    text-align: right;
+}
+
 @media (max-width: 600px) {
     body {
         padding: 5px;
